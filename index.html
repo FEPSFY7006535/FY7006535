@@ -55,16 +55,16 @@
   <!-- ////////////////////////////// Word count function ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
 <!-- Placeholder for total word count -->
-<p>Page word count: <strong id="total-words">0</strong></p>
+<p>Total word count: <strong id="total-words">0</strong></p>
 
   <script>
     function totalwordcount() {
       //Get all text in BODY tag
-      const pageText = document.body.innerText;
+      const allText = document.body.innerText;
 
       //Removing spaces and count the words
-      const words = pageText.trim().split(/\s+/);
-      const count = pageText.trim() === "" ? 0 : words.length;
+      const words = allText.trim().split(/\s+/);
+      const count = allText.trim() === "" ? 0 : words.length;
 
       //Return number of words
       document.getElementById("total-words").textContent = count;
